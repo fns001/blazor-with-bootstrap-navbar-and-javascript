@@ -1,4 +1,4 @@
-# Blazor WebAssembly, Bootstrap 4 NavBar and JavaScript together
+# Blazor, Bootstrap 4 and JavaScript together
 
 This minimalist Blazor WebAssembly app demonstrates how these technologies can work seamlessly together.
 
