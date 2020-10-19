@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<h3>Blazor WebAssembly, Bootstrap 4 and JavaScript together</h3>
+
+<p>This minimalist Blazor WebAssembly app demonstrates how these technologies can work seamlessly together.</p>
+<p>
+    <ul>
+        <li>The Navbar above uses <strong>Boostrap 4</strong>.</li>
+        <li>The table below is populated with <strong>WebAssembly</strong>.</li>
+        <li>Scrolling the page down gives the top navbar a box shadow: That is written in <strong>JavaScript</strong>.</li>
+    </ul>
+</p>
+
+<div class="py-1">
+    <div class="form-group row">
+            <label class="col-form-label px-3">No. of rows:</label>
+            <input class="form-control col-1" Value="@NoOfRows" min="0" max="100" type="number" @onchange="@((ChangeEventArgs e) => NoOfRowsChanged(e))" />
+    </div>
+</div>
+
+<table class="table border border-light">
+    <tbody>
+        @foreach (var number in NumberRange)
+        {
+            <tr>
+                <td>Row @number</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<int> NumberRange { get; set; }
+    public int NoOfRows { get; set; } = 50;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await InvokeAsync(() =>
+        {
+            NumberRange = Enumerable.Range(1, NoOfRows);
+        });
+    }
+
+    private void NoOfRowsChanged(ChangeEventArgs e)
+    {
+        int.TryParse(e.Value.ToString(), out int val);
+        NoOfRows = val;
+        NumberRange = Enumerable.Range(1, NoOfRows);
+    }
+}

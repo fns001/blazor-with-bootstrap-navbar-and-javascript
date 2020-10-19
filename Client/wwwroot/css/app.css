@@ -1,0 +1,32 @@
+﻿@import url("open-iconic/font/css/open-iconic-bootstrap.min.css");
+html, body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+app {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+.main {
+  flex: 1; }
+
+.main.with-fixed-top {
+  margin-top: 60px; }
+
+.navbar.navbar-sticky-scrolling {
+  box-shadow: 0 0 20px #bbb; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1190px; } }
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1340px; } }
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1540px; } }
+
+.validation-message {
+  color: red; }
