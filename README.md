@@ -1,9 +1,9 @@
-# Blazor, Bootstrap 4 and JavaScript together
+# Blazor, Bootstrap and JavaScript together
 
 This minimalist Blazor WebAssembly app demonstrates how these technologies can work seamlessly together.
 
-- The Navbar above uses Boostrap 4.
-- The table below is populated with WebAssembly.
+- The Navbar uses Boostrap 4.
+- The table is populated with WebAssembly.
 - Scrolling the page down gives the top navbar a box shadow: That is written in JavaScript.
 
 ## To run
